@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)# -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>
+    Bootstrap 4 Fixed Layout Example
+</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500&display=swap" rel="stylesheet" />
+<!-- <script src="https://kit.fontawesome.com/bdc84e071b.js" crossorigin="anonymous"></script> -->
+<!-- CSS here -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+<link href="assets/css/fontawesome.css" rel="stylesheet" />
+<link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/nice-select.css" rel="stylesheet" />
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta/dist/css/bootstrap-select.min.css"> -->
+<link href="assets/css/default.css" rel="stylesheet" />
+<link href="assets/css/input-tel.css" rel="stylesheet" />
+<link href="assets/css/style.css" rel="stylesheet" />
+<link href="assets/css/responsive.css" rel="stylesheet" />
+
+<!--
+Responsive
+<style>
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+/* Styles */
+.app-header-right {
+position: absolute;
+margin-top: -6px;
+width: 100%;
+right: 0px;
+}
+
+.nav-right {
+padding-right: 20px
+}
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+</style>
+
+-->
+</head>
+
+<body>
+<form method="post" action="http://localhost:63536/SideMenu" id="form1">
+    <!-- http://localhost:63536/SideMenu -->
+<div class="aspNetHidden">
+    <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+    <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="IQyMHeAQqTNjkrDRNFYb/sDL/8X8Yi+sCjx5VvFMfJixQ6M7n5NVyf/1nIW3a7RSXb7u+pdIl+HEoDso9RGzjQunACxZdXzB6Lj5RX2e8HBIw9mZSul6rHB2XluabBLM6Eecqpe9lVwwOuf++VCeng==" />
+</div>
+
+<script type="text/javascript">
+    //<![CDATA[
+    var theForm = document.forms["form1"];
+    if (!theForm) {
+        theForm = document.form1;
+    }
+
+    function __doPostBack(eventTarget, eventArgument) {
+        if (!theForm.onsubmit || theForm.onsubmit() != false) {
+            theForm.__EVENTTARGET.value = eventTarget;
+            theForm.__EVENTARGUMENT.value = eventArgument;
+            theForm.submit();
+        }
+    }
+    //]]>
+</script>
+
+    <script src="./Bootstrap 4 Fixed Layout Example_files/WebResource.axd" type="text/javascript"></script>
+
+    <script src="./Bootstrap 4 Fixed Layout Example_files/MicrosoftAjax.js.download" type="text/javascript"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        if (typeof Sys === "undefined") throw new Error("ASP.NET Ajax client-side framework failed to load.");
+        //]]>
+    </script>
+
+    <script src="./Bootstrap 4 Fixed Layout Example_files/MicrosoftAjaxWebForms.js.download" type="text/javascript"></script>
+    <div class="aspNetHidden">
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="0ABC8675" />
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[ 
+        Sys.WebForms.PageRequestManager._initialize("scrpt", "form1", [], [], [], 90, "");
+        //]]>
+    </script>
+
+    <div class="progressContainer preloader" style="display: none;">
+        <div class="progressContent">
+            <img src="./Bootstrap 4 Fixed Layout Example_files/Rolling-1s-50px (1).gif" />
+        </div>
+    </div>
+
+    <div class="backdrop" id="mobileBackDrop" onclick="closeNav()" style="display: none;"></div>
+<div id="SideNav" class="sidenav">
+    <a href="#" class="app-logo-container">
+        <div class="row app-logo" id="dvLogo">
+            <div class="col-12">
+                <img src="assets/img/logo.png" width="50" id="logo" style="width: 50px;" />
+            </div>
+        </div>
+    </a>
+
+    <a href="#">
+        <div class="row">
+            <div class="menu-icon col-2"><i class="fas fa-home fa-lg"></i></div>
+            <div class="col-10 menu-text" title="Dashboard" style="display: block;">Dashboard</div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="row">
+            <div class="menu-icon col-2"><i class="fas fa-file-user fa-lg"></i></div>
+            <div class="col-10 menu-text" title="My Resume" style="display: block;">My Resume</div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="row">
+            <div class="menu-icon col-2"><i class="fa fa-rocket fa-lg"></i></div>
+            <div class="col-10 menu-text" title="Subscription &amp; Billing" style="display: block;">Subscription &amp; Billing</div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="row">
+            <div class="menu-icon col-2"><i class="fa fa-briefcase fa-lg"></i></div>
+            <div class="col-10 menu-text" title="My Pre-Offers" style="display: block;">My Pre-Offers</div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="row">
+            <div class="menu-icon col-2"><i class="fa fa-bullseye fa-lg"></i></div>
+            <div class="col-10 menu-text" title="My Interviews" style="display: block;">My Interviews</div>
+        </div>
+    </a>
+
+    <a href="#">
+        <div class="row">
+            <div class="menu-icon col-2"><i class="fa fa-inbox fa-lg"></i></div>
+            <div class="col-10 menu-text" title="Inbox" style="display: block;">Inbox</div>
+        </div>
+    </a>
+
+    <a href="#">
+        <div class="row">
+            <div class="menu-icon col-2"><i class="fa fa-user-circle fa-lg"></i></div>
+            <div class="col-10 menu-text" title="Profile &amp; Settings" style="display: block;">Profile &amp; Settings</div>
+        </div>
+    </a>
+
+    <div class="menu-footer">
+        <a href="#">
+            <div class="row">
+                <div class="menu-icon col-2"><i class="fa fa-question-circle fa-lg"></i></div>
+                <div class="col-10 menu-text" title="How it Works" style="display: block;">How it Works</div>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="row">
+                <div class="menu-icon col-2"><i class="fa fa-life-ring fa-lg"></i></div>
+                <div class="col-10 menu-text" title="Support" style="display: block;">Support</div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div id="main" class="app-container">
+<div class="header-area">
+<div class="container-fluid">
+<div class="row app-sticky-header">
+<div class="col-5">
+    <div class="menubar" onclick="openMenu(&#39;H&#39;)" id="dvFull" style="display: block;"><i class="fas fa-chevron-left"></i></div>
+    <div class="menubar" onclick="openMenu(&#39;F&#39;)" id="dvHalfMenu" style="display: none;"><i class="fas fa-chevron-right"></i></div>
+    <div class="" onclick="openMenu(&#39;F&#39;)" id="dvMenuBarMobileContainer">
+        <!-- <i class="fas fa-bars" id="dvMobileMenu"></i> -->
+        <!-- <img src="./Bootstrap 4 Fixed Layout Example_files/logoBlue.png" class="" width="50" id="imgLogoMobile" style="display: none;" /> -->
+    </div>
+</div>
+<div class="col-7 text-right">
+    <div class="app-header-right">
+    <div class="notification-blk">
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="ntf-blk">
+                    <i class="fas fa-bell"></i>
+                    <span class="amnt">2</span>
+                </div>
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
+    </div>
+    <div class="uset-blk">
+        <h3>Good Morning, <span>David</span></h3>
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="user-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="assets/img/user-img.png" alt="" />
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="user-menu">
+            <div class="lang-list">
+                <a class="dropdown-item" href="#">User Menu 1</a>
+                <a class="dropdown-item" href="#">User Menu 2</a>
+                <a class="dropdown-item" href="#">User Menu 3</a>
+                <a class="dropdown-item" href="#">User Menu 4</a>
+            </div>
+        </div>
+    </div>
+    <div class="lan-blk">
+    <div class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="lng-inner">
+                <img src="assets/img/flag-1.png" alt="" />
+                <i class="fas fa-angle-down"></i>
+            </div>
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <div class="lang-list">
+                <a class="dropdown-item" href="#"><img src="assets/img/flag-1.png" alt="" />English</a>
+                <a class="dropdown-item" href="#"><img src="assets/img/flag-1.png" alt="" />English</a>
+                <a class="dropdown-item" href="#"><img src="assets/img/flag-1.png" alt="" />English</a>
+                <a class="dropdown-item" href="#"><img src="assets/img/flag-1.png" alt="" />English</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div class="inner-content-main-area">
+<div class="container-fluid">
+<div class="row">
+    <div class="col-12">
+        <!-- header top title area  -->
+        <div class="header-top-title">
+            <h2>Welcome David Newman!</h2>
+            <p>This wizard will help you set up to start using EmployKey. <a href="">Learn More</a></p>
+            <div class="header-top-prosess mobile-hide d-flex">
+                <div class="single-process active single-process1">
+                    <span>1</span>
+                    <p>Bio Data</p>
+                </div>
+                <div class="single-process single-process2">
+                    <span>2</span>
+                    <p>Communication & Social Media</p>
+                </div>
+                <div class="single-process single-process3">
+                    <span>3</span>
+                    <p>Preferences</p>
+                </div>
+            </div>
+            <br>
+            <div class="header-top-prosess mobile-hide d-flex">
+                <a href="#" class="prosess-btn active">
+                    Bio Data
+                </a>
+                <a href="#" class="prosess-btn">
+                    Communication & Social Media
+                </a>
+                <a href="#" class="prosess-btn">
+                    Preferences
+                </a>
+            </div>
+
+            <div class="header-top-prosess mobile-show">
+                <a href="#" class="prev">
+                    <i class="fas fa-caret-left"></i>
+                </a>
+                 <p class="steps">Step 1 of 3: Bio Data</p>
+
+                 <a href="#" class="next active">
+                    <i class="fas fa-caret-right"></i>
+                 </a>
+            </div>
+        </div>
+        <!-- header top title area  -->
+        <!-- content-main-form-are-start -->
+    </div>
+ <div class="form-content-main-wrapper">
+ <form action="">
+    <div class="form-area-wrapper">
+        <h3 class="f-title">Personal Details</h3>
+
+        <div class="upload-image-area">
+            <span class="title-span">Upload profile picture *</span>
+            <div class="upload-img-wrapper d-flex align-items-center">
+                <div class="upload-img">
+                    <img src="assets/img/up-load.png" alt="" />
+                </div>
+                <div class="upload-img-right">
+                    <a href="">Change Photo</a>
+                </div>
+            </div>
+            <div class="cheak-area">
+                <ul class="checkbox_common d-flex align-items-center checkbox_style2">
+                    <li>
+                        <input type="checkbox" name="checkbox2" id="checkbox1" />
+                        <label for="checkbox1">
+                            <span></span>
+                        </label>
+                    </li>
+                    <label for="checkbox1" class="label-light">Do not share profile picture
+                        with employers</label>
+                </ul>
+            </div>
+        </div>
+
+     <div class="info-form">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-info-form">
+                            <div class="lang-title">
+                                <label for="">Given Name *</label>
+                            </div>
+                            <input type="text" name="" placeholder="David" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-info-form">
+                            <div class="lang-title">
+                                <label for="">Middle Name</label>
+                            </div>
+                            <input type="text" name="" placeholder="David" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-info-form">
+                            <div class="lang-title">
+                                <label for="">Family Name *</label>
+                            </div>
+                            <input type="text" name="" placeholder="David" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+     <div class="national-date">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-info-form">
+                            <div class="lang-title">
+                                <label for="">Nationality *</label>
+                            </div>
+                            <div class="select-option">
+                                <select class="selectpicker wide">
+                                    <option>Malaysian</option>
+                                    <option>Bangladesh</option>
+                                    <option>India</option>
+                                </select>
+                            </div>
+                            <div class="cheak-area nationality-check">
+                                <ul class="checkbox_common d-flex align-items-center checkbox_style2">
+                                    <li>
+                                        <input type="checkbox" name="checkbox2" id="checkbox2" />
+                                        <label for="checkbox2"><span></span></label>
+                                    </li>
+                                    <label for="checkbox2" class="label-light">
+                                        Do not share nationality with
+                                        employers
+                                    </label>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 mb-5">
+                        <div class="single-info-form">
+                            <div class="lang-title">
+                                <label for="">Date of Birth</label>
+                            </div>
+                            <div class="select-date">
+                                <input id="datepicker"/>
+                                <img src="assets/img/calender.png" alt="" />
+                            </div>
+                            <div class="riquired">This field is required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+        <div class="status-wrapper">
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="status-area marital mb-4">
+                                <h6>Marital Status *</h6>
+                                <ul class="radio_common radio_style2">
+                                    <li>
+                                        <input type="radio" checked="" name="Marital" id="radio1" />
+                                        <label for="radio1"><span></span>Married</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="Marital" id="radio2" />
+                                        <label for="radio2"><span></span>Single</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="Marital" id="radio3" />
+                                        <label for="radio3"><span></span>Divorced</label>
+                                    </li>
+                                </ul>
+                                <div class="cheak-area">
+                                    <ul class="checkbox_common d-flex align-items-center checkbox_style2">
+                                        <li>
+                                            <input type="checkbox" name="checkbox2" id="checkbox3" />
+                                            <label for="checkbox3">
+                                                <span></span>
+                                            </label>
+                                        </li>
+                                        <label for="checkbox3" class="label-light">
+                                            Do not share marital status
+                                            with employers
+                                        </label>
+                                    </ul>
+                                </div>
+                                <div class="single-person">
+                                    <h6>Are you a single parent? *</h6>
+                                    <ul class="radio_common radio_style2">
+                                        <li>
+                                            <input type="radio" checked="" name="Sparent" id="radio4" />
+                                            <label for="radio4"><span></span>Yes</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="Sparent" id="radio5" />
+                                            <label for="radio5"><span></span>No</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="status-area gender">
+                                <h6>Gender *</h6>
+                                <ul class="radio_common radio_style2">
+                                    <li>
+                                        <input type="radio" checked="" name="Gender" id="radio7" />
+                                        <label for="radio7"><span></span>Male</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="Gender" id="radio8" />
+                                        <label for="radio8"><span></span>Female</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="Gender" id="radio9" />
+                                        <label for="radio9"><span></span>Others</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="Gender" id="radio10" />
+                                        <label for="radio10"><span></span>Prefer not to say</label>
+                                    </li>
+                                </ul>
+                                <div class="cheak-area">
+                                    <ul class="checkbox_common d-flex align-items-center checkbox_style2">
+                                        <li>
+                                            <input type="checkbox" name="checkbox2" id="checkbox4" />
+                                            <label for="checkbox4"><span></span></label>
+                                        </li>
+                                        <label for="checkbox4" class="label-light">
+                                            Do not share gender with 
+                                            employers
+                                        </label>
+                                    </ul>
+                                </div>
+                                <div class="riquired">This field is required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-area-wrapper">
+        <h3 class="f-title">Hobbies</h3>
+        <div class="hobies-content-wrapper">
+            <div class="row">
+                <div class="col-12">
+                    <div class="hobise-item">
+                        <div class="row">
+                            <div class="col-10 col-lg-4">
+                                <div class="single-info-form position-relative">
+                                    <input type="text" name="" placeholder="Hobby Name" />
+                                    <div class="add-btn">
+                                        <a href=""><i class="fas fa-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hobise-bottome">
+                            <div class="riquired">This field is required</div>
+                            <div class="hobi-items-tag">
+                                <span>3 of 50 hobbies added</span>
+                                <div class="hobies-single-tag-wrapper d-flex">
+                                    <div class="single-item">
+                                        Swimming<a href=""><i class="fas fa-times-circle"></i></a>
+                                    </div>
+                                    <div class="single-item">
+                                        Cricket<a href=""><i class="fas fa-times-circle"></i></a>
+                                    </div>
+                                    <div class="single-item">
+                                        Doodling<a href=""><i class="fas fa-times-circle"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- language area start -->
+<div class="form-area-wrapper">
+    <h3 class="f-title">Languages</h3>
+    <div class="lang-content-wrapper">
+        <div class="lang-item">
+        <div class="langoptions-wrapper">
+            <div class="row">
+                <div class="col-12 position-relative">
+                    <div class="add-language-wraper">
+                        <div class="row">
+                            <div class="col-xl-5 col-lg-6">
+                                <div class="language-form">
+                                    <label for="">Language name</label>
+                                    <input type="text" name="" placeholder="If Any" />
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-2 col-lg-6">
+                                <div class="single-lang-option">
+                                    <div class="lang-title">
+                                        <label>Speak</label>
+                                    </div>
+                                    <select class="selectpicker">
+                                        <option>Select</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-2 col-lg-6">
+                                <div class="single-lang-option">
+                                    <div class="lang-title">
+                                        <label>Read</label>
+                                    </div>
+                                    <select class="selectpicker">
+                                        <option>Select</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-2 col-lg-5 single-lang-option-btn position-relative">
+                                <div class="single-lang-option">
+                                    <div class="lang-title">
+                                        <label>Write</label>
+                                    </div>
+                                    <select class="selectpicker">
+                                        <option>Select</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                                </div>
+    
+                                <div class="add-btn">
+                                    <a href=""><i class="fas fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        <div class="lang-item">
+        <div class="langoptions-wrapper">
+            <div class="row">
+                <div class="col-12 position-relative">
+                    <div class="add-language-wraper">
+                        <div class="row">
+                            <div class="col-xl-5 col-lg-6">
+                                <div class="language-form">
+                                    <label for="">Language name</label>
+                                    <input type="text" name="" value="English" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-2 col-lg-6">
+                                <div class="single-lang-option">
+                                    <div class="lang-title">
+                                        <label>Speak</label>
+                                    </div>
+                                    <select class="selectpicker">
+                                        <option >Select</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-2 col-lg-6">
+                                <div class="single-lang-option">
+                                    <div class="lang-title">
+                                        <label>Read</label>
+                                    </div>
+                                    <select class="selectpicker">
+                                        <option>Select</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-2 col-lg-5 single-lang-option-btn position-relative">
+                                <div class="single-lang-option">
+                                    <div class="lang-title">
+                                        <label>Write</label>
+                                    </div>
+                                    <select class="selectpicker">
+                                        <option>Select</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                                </div>
+    
+                                <div class="add-btn">
+                                    <a href=""><i class="fas fa-times"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        <div class="lang-item">
+        <div class="langoptions-wrapper">
+            <div class="row">
+                <div class="col-12 position-relative">
+                    <div class="add-language-wraper">
+                        <div class="row">
+                            <div class="col-xl-5 col-lg-6">
+                                <div class="language-form">
+                                    <label for="">Language name</label>
+                                    <input type="text" name="" value="Farsi" disabled />
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-2 col-lg-6">
+                                <div class="single-lang-option">
+                                    <div class="lang-title">
+                                        <label>Speak</label>
+                                    </div>
+                                    <select class="selectpicker">
+                                        <option>Select</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-2 col-lg-6">
+                                <div class="single-lang-option">
+                                    <div class="lang-title">
+                                        <label>Read</label>
+                                    </div>
+                                    <select class="selectpicker">
+                                        <option>Select</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-2 col-lg-5 single-lang-option-btn position-relative">
+                                <div class="single-lang-option">
+                                    <div class="lang-title">
+                                        <label>Write</label>
+                                    </div>
+                                    <select class="selectpicker">
+                                        <option>Select</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                                </div>
+    
+                                <div class="add-btn">
+                                    <a href=""><i class="fas fa-times"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+    </div>
+</div>
+    <!-- language area end -->
+    <div class="next-back-btn">
+        <!-- <a href="" class="back-btn">Back</a> -->
+        <a href="" class="nxt-btn">Next</a>
+    </div>
+
+
+
+
+    <div class="col-12">
+        <!-- header top title area  -->
+        <div class="header-top-title">
+            <h2>Welcome David Newman!</h2>
+            <p>This wizard will help you set up to start using EmployKey. <a href="">Learn More</a></p>
+            <div class="header-top-prosess mobile-hide d-flex">
+                <div class="single-process single-process1">
+                    <span>1</span>
+                    <p>Bio Data</p>
+                </div>
+                <div class="single-process active single-process2">
+                    <span>2</span>
+                    <p>Communication & Social Media</p>
+                </div>
+                <div class="single-process single-process3">
+                    <span>3</span>
+                    <p>Preferences</p>
+                </div>
+            </div>
+            <br>
+            <div class="header-top-prosess mobile-hide d-flex">
+                <a href="#" class="prosess-btn">
+                    Bio Data
+                </a>
+                <a href="#" class="prosess-btn active">
+                    Communication & Social Media
+                </a>
+                <a href="#" class="prosess-btn">
+                    Preferences
+                </a>
+            </div>
+
+            <div class="header-top-prosess mobile-show">
+                <a href="#" class="prev">
+                    <i class="fas fa-caret-left"></i>
+                </a>
+                 <p class="steps">Step 1 of 3: Bio Data</p>
+
+                 <a href="#" class="next active">
+                    <i class="fas fa-caret-right"></i>
+                 </a>
+            </div>
+        </div>
+        <!-- header top title area  -->
+        <!-- content-main-form-are-start -->
+    </div>
+
+    <!-- Communication area start -->
+<div class="form-area-wrapper communication">
+    <h3 class="f-title">Communication</h3>
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-xl-4 col-lg-6">
+                    <div class="single-info-form">
+                        <div class="lang-title">
+                            <label for="">Email Address *</label>
+                        </div>
+                        <input type="email" name="Email"/>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 mobile-nuber">
+                    <div class="single-info-form">
+                        <div class="lang-title">
+                            <label for="">Mobile Number *</label>
+                        </div>
+                        <div class="mobile-number-input">
+                            <!-- <input id="phone" name="phone" type="tel"> -->
+                            <div class="number-input-group">
+                                <select name="area code">
+                                    <option value="+12">+12</option>
+                                    <option value="+12">+12</option>
+                                    <option value="+12">+12</option>
+                                    <option value="+12">+12</option>
+                                </select>
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="checkbox_common checkbox_style2">
+                        <li>
+                            <input type="checkbox" name="checkbox2" id="number" />
+                            <label for="number">
+                                <span></span>
+                            </label>
+                        </li>
+                        <label class="label-light" for="number">Do not share mobile number
+                            with employers</label>
+                    </ul>
+                </div>
+                <div class="col-xl-4 col-lg-6 phone-check d-flex">
+                    <ul class="checkbox_common checkbox_style2">
+                        <li>
+                            <input type="checkbox" name="checkbox2" id="whatsapp" />
+                            <label for="whatsapp">
+                                <span></span>Whatsapp <a href="#">Verify</a>
+                            </label>
+                        </li>
+                    </ul>
+                    <ul class="checkbox_common checkbox_style2">
+                        <li>
+                            <input type="checkbox" name="checkbox2" id="telegram" />
+                            <label for="telegram">
+                                <span></span> Telegram
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Communication area end -->
+
+
+
+    <!-- Address Line area start -->
+<div class="form-area-wrapper address-area">
+    <h3 class="f-title">Current Address</h3>
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8">
+                    <div class="single-info-form address-form">
+                        <div class="lang-title">
+                            <label for="">Address Line 1</label>
+                        </div>
+                        <input type="text" name="Address Line 1"/>
+                    </div>
+                    
+                </div>
+                <div class="col-xl-8 col-lg-8 mobile-nuber">
+                    <div class="single-info-form">
+                        <div class="lang-title">
+                            <label for="">Address Line 2</label>
+                        </div>
+                        <input type="text" name="Address Line 2" />
+                    </div>
+                    <ul class="checkbox_common address align-items-center checkbox_style2">
+                        <li>
+                            <input type="checkbox" name="checkbox2" id="address" />
+                            <label for="address">
+                                <span></span>
+                            </label>
+                        </li>
+                        <label class="label-light" for="address">Do not share address and post code with employers</label>
+                    </ul>
+                </div>
+                <div class="col-xl-4 col-lg-6">
+                    <div class="single-info-form">
+                        <div class="lang-title">
+                            <label for="">Post Code *</label>
+                        </div>
+                        <input type="text" name="post code"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 ">
+            <div class="row">
+                <div class="col-xl-4 col-lg-6 mb-4">
+                    <div class="single-lang-option">
+                        <div class="lang-title">
+                            <label>State</label>
+                        </div>
+                        <select class="selectpicker wide">
+                            <option>Select</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 mb-4">
+                    <div class="single-lang-option">
+                        <div class="lang-title">
+                            <label>City</label>
+                        </div>
+                        <select class="selectpicker wide">
+                            <option>Select</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 mb-4">
+                    <div class="single-lang-option">
+                        <div class="lang-title">
+                            <label>Country *</label>
+                        </div>
+                        <select class="selectpicker wide">
+                            <option>Select</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 mb-4">
+                    <div class="single-lang-option">
+                        <div class="lang-title">
+                            <label>Visa status in this country</label>
+                        </div>
+                        <select class="selectpicker wide">
+                            <option>Select</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Address Line area end -->
+
+
+
+    <!-- Social Media area start -->
+    <div class="form-area-wrapper communication social">
+        <h3 class="f-title">Social Media</h3>
+        <div class="row">
+            <div class="col-12">
+                <div class="row social-flex d-flex">
+                    <div class="col-xl-4 col-lg-6 mobile-nuber">
+                        <div class="single-info-form">
+                            <div class="lang-title">
+                                <label for="">Facebook</label>
+                            </div>
+                            <input type="text" name="Facebook" placeholder="https://facebook.com/…"/>
+                        </div>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Facebook" id="facebook" />
+                                <label for="facebook">
+                                    <span></span>
+                                </label>
+                            </li>
+                            <label class="label-light" for="facebook">Do not share Facebook with 
+                                employers</label>
+                        </ul>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 mobile-nuber">
+                        <div class="single-info-form">
+                            <div class="lang-title">
+                                <label for="">Instagram</label>
+                            </div>
+                            <input type="text" name="Instagram" placeholder="https://instagram/…"/>
+                        </div>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Instagram" id="instagram" />
+                                <label for="instagram">
+                                    <span></span>
+                                </label>
+                            </li>
+                            <label class="label-light" for="instagram">Do not share Instagram with
+                                employers</label>
+                        </ul>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 mobile-nuber">
+                        <div class="single-info-form">
+                            <div class="lang-title">
+                                <label for="">Linkedin</label>
+                            </div>
+                            <input type="text" name="Linkedin" placeholder="https://linkedin.com/in…"/>
+                        </div>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Linkedin" id="linkedin"/>
+                                <label for="number">
+                                    <span></span>
+                                </label>
+                            </li>
+                            <label class="label-light" for="linkedin">Do not share LinkedIn with
+                                employers</label>
+                        </ul>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 mobile-nuber">
+                        <div class="single-info-form">
+                            <div class="lang-title">
+                                <label for="">Skype</label>
+                            </div>
+                            <input type="text" name="Skype" placeholder="Skype ID"/>
+                        </div>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Skype" id="skype" />
+                                <label for="skype">
+                                    <span></span>
+                                </label>
+                            </li>
+                            <label class="label-light" for="skype">Do not share Skype with
+                                employers</label>
+                        </ul>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 mobile-nuber">
+                        <div class="single-info-form">
+                            <div class="lang-title">
+                                <label for="">Zoom</label>
+                            </div>
+                            <input type="text" name="Zoom ID" placeholder="Zoom ID"/>
+                        </div>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Zoom ID" id="zoom" />
+                                <label for="zoom">
+                                    <span></span>
+                                </label>
+                            </li>
+                            <label class="label-light" for="zoom">Do not share Zoom ID with
+                                employers</label>
+                        </ul>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Social Media area end -->
+
+        <div class="next-back-btn">
+            <a href="" class="back-btn">Back</a>
+            <a href="" class="nxt-btn">Next</a>
+        </div>
+
+        <div class="col-12">
+            <!-- header top title area  -->
+            <div class="header-top-title">
+                <h2>Welcome David Newman!</h2>
+                <p>This wizard will help you set up to start using EmployKey. <a href="">Learn More</a></p>
+                <div class="header-top-prosess mobile-hide d-flex">
+                    <div class="single-process single-process1">
+                        <span>1</span>
+                        <p>Bio Data</p>
+                    </div>
+                    <div class="single-process single-process2">
+                        <span>2</span>
+                        <p>Communication & Social Media</p>
+                    </div>
+                    <div class="single-process active single-process3">
+                        <span>3</span>
+                        <p>Preferences</p>
+                    </div>
+                </div>
+                <br>
+                <div class="header-top-prosess mobile-hide d-flex">
+                    <a href="#" class="prosess-btn">
+                        Bio Data
+                    </a>
+                    <a href="#" class="prosess-btn">
+                        Communication & Social Media
+                    </a>
+                    <a href="#" class="prosess-btn active">
+                        Preferences
+                    </a>
+                </div>
+    
+                <div class="header-top-prosess mobile-show">
+                    <a href="#" class="prev">
+                        <i class="fas fa-caret-left"></i>
+                    </a>
+                     <p class="steps">Step 1 of 3: Bio Data</p>
+    
+                     <a href="#" class="next active">
+                        <i class="fas fa-caret-right"></i>
+                     </a>
+                </div>
+            </div>
+            <!-- header top title area  -->
+            <!-- content-main-form-are-start -->
+        </div>
+
+
+    <!-- Employment area start -->
+    <div class="form-area-wrapper communication employment">
+        <h3 class="f-title">Employment</h3>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="status-area">
+                            <h6>Curent Employment Status *</h6>
+                            <ul class="radio_common radio_style2">
+                                <li>
+                                    <input type="radio" checked="" name="Employment" id="employment1"/>
+                                    <label for="employment1"><span></span>Unemployed</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="Employment" id="employment2" />
+                                    <label for="employment2"><span></span>Happy with my current job</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="Employment" id="employment3" />
+                                    <label for="employment3"><span></span>Looking for a better
+                                        opportunity</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="status-area gender mb-4">
+                            <h6>Availability *</h6>
+                            <div class="single-lang-option">
+                                <!-- <div class="lang-title">
+                                    <label>State</label>
+                                </div> -->
+                                <select class="selectpicker wide">
+                                    <option>Select</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </div>
+                            <label for="" class="label-light mt-2">If you get a job offer how soon
+                                can you join them.</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Employment area end -->
+
+
+
+    <!-- extra info area start -->
+    <div class="form-area-wrapper communication extra-info">
+        <h3 class="f-title">Social Media</h3>
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 col-md-10 col-sm-12">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 extra-info-check mb-5">
+                        <h6>Positions Interested *</h6>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Full Time" id="FullTime" />
+                                <label for="FullTime">
+                                    <span></span> Full Time 
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Part Time" id="PartTime" />
+                                <label for="PartTime">
+                                    <span></span> Part Time
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Contract Casual" id="ContractCasual" />
+                                <label for="ContractCasual">
+                                    <span></span> Contract/Casual
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Freelance" id="Freelance" />
+                                <label for="Freelance">
+                                    <span></span> Freelance
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Internship" id="Internship" />
+                                <label for="Internship">
+                                    <span></span> Internship
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Apprenticeship" id="Apprenticeship" />
+                                <label for="Apprenticeship">
+                                    <span></span> Apprenticeship
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Seasonal" id="Seasonal" />
+                                <label for="Seasonal">
+                                    <span></span> Seasonal
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 extra-info-check">
+                        <h6>Employer preferences *</h6>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Any" id="Any" />
+                                <label for="Any">
+                                    <span></span> Any
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Startups" id="Startups" />
+                                <label for="Startups">
+                                    <span></span> Startups
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Governmental" id="Governmental" />
+                                <label for="Governmental">
+                                    <span></span> Governmental
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Private" id="Private" />
+                                <label for="Private">
+                                    <span></span> Private
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="NGOs" id="NGOs" />
+                                <label for="NGOs">
+                                    <span></span> NGOs
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Local Companies" id="LocalCompanies" />
+                                <label for="LocalCompanies">
+                                    <span></span> Local Companies
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Overseas Companies" id="OverseasCompanies" />
+                                <label for="OverseasCompanies">
+                                    <span></span> Overseas Companies
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="checkbox_common checkbox_style2">
+                            <li>
+                                <input type="checkbox" name="Volunteer" id="Volunteer" />
+                                <label for="Volunteer">
+                                    <span></span> Volunteer
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- extra info area end -->
+
+</form>
+<div class="next-back-btn">
+    <a href="" class="back-btn">Back</a>
+    <a href="" class="nxt-btn">Next</a>
+</div>
+</div>
+
+        <!-- content-main-form-are-start -->
+    </div>
+</div>
+    <!--
+<div class="row">
+<div class="col-12">
+<div class="card place-holder">
+
+<div class="card-body">
+
+<div style="height: 80vh; overflow-y: auto" id="bodyContainer">
+<a href="#" onclick="openMenu(&#39;F&#39;)">Full Menu</a><br>
+<a href="#" onclick="openMenu(&#39;H&#39;)">Half menu</a><br>
+<a href="#" onclick="openMenu(&#39;N&#39;)">No Menu</a><br>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+-->
+</div>
+
+<div class="site-footer-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="site-footer-inner">
+                    <p>© 2020 EmployKey • <a href="">Privacy Policy</a> <span>-</span> <a href="">Cookies</a> <span>-</span> <a href="">Terms</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+</form>
+
+
+<!-- ========================================================= -->
+<!-- ==================== preloader area ===================== -->
+
+<div class="preloader">
+    <div class="preload-animation">
+        <img src="assets/img/preload.png" alt="preloader">
+    </div>
+</div>
+
+
+<!-- ========================================================= -->
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta/dist/js/bootstrap-select.min.js"></script> -->
+
+    <script src="assets/js/input-tel.js"></script>
+
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+          // allowDropdown: false,
+          autoHideDialCode: false,
+          autoPlaceholder: "on",
+          // dropdownContainer: document.body,
+          // excludeCountries: ["us"],
+          // formatOnDisplay: false,
+          // geoIpLookup: function(callback) {
+          //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+          //     var countryCode = (resp && resp.country) ? resp.country : "";
+          //     callback(countryCode);
+          //   });
+          // },
+          // hiddenInput: "full_number",
+          // initialCountry: "auto",
+          // localizedCountries: { 'de': 'Deutschland' },
+          // nationalMode: false,
+          // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+          // placeholderNumberType: "MOBILE",
+          // preferredCountries: ['cn', 'jp'],
+          separateDialCode: true,
+          utilsScript: "assets/js/utils.js",
+        });
+      </script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(window).on("load" , function(){
+           $(".preloader").fadeOut();
+        });
+
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+
+        
+      </script>
+    <script>
+        var Scrollbar = window.Scrollbar;
+        Scrollbar.init(document.querySelector('#bodyContainer'), {
+           thumbMinSize: 5,
+
+        });
+        var operation;
+
+        function openMenu(menuOperation) {
+            operation = menuOperation;
+            openNav();
+        }
+
+        function loadMenu() {
+            if (checkDeviceIsMobile() == false) {
+                openMenu("F"); //F full H half N no menu
+                console.log("desk");
+            } else {
+                operation = "F";
+                menubarOperation(operation);
+                closeNav();
+                console.log("mobile");
+            }
+        }
+
+        window.addEventListener(
+            "resize",
+            function () {
+                loadMenu();
+            },
+            false
+        );
+        window.addEventListener(
+            "orientationchange",
+            function () {
+                loadMenu();
+            },
+            false
+        );
+
+        // $(window).on("load", function () {
+        //     $(".preloader").fadeOut("slow");
+        // });
+
+        $(document).ready(function () {
+            loadMenu();
+        });
+
+        function openNav() {
+            if (operation == "F") {
+                document.getElementById("SideNav").style.display = "block";
+                document.getElementById("SideNav").style.width = "288px";
+                if (checkDeviceIsMobile() == false) {
+                    document.getElementById("main").style.marginLeft = "288px";
+                    document.getElementById("logo").style.width = "50px";
+                    document.getElementById("mobileBackDrop").style.display = "none";
+                } else {
+                    //document.getElementById('dvLogo').style.display = 'none';
+                    document.getElementById("logo").style.width = "50px";
+                    document.getElementById("mobileBackDrop").style.display = "block";
+                }
+                menuTextOperation(operation);
+            }
+            if (operation == "H") {
+                document.getElementById("SideNav").style.display = "block";
+                document.getElementById("SideNav").style.width = "100px";
+                if (checkDeviceIsMobile() == false) {
+                    document.getElementById("main").style.marginLeft = "100px";
+                    document.getElementById("logo").style.width = "40px";
+                    document.getElementById("mobileBackDrop").style.display = "none";
+                    //logo
+                } else {
+                    //document.getElementById('dvLogo').style.display = 'none';
+                    document.getElementById("logo").style.width = "50px";
+                    document.getElementById("mobileBackDrop").style.display = "block";
+                }
+                menuTextOperation(operation);
+            }
+            if (operation == "N") {
+                document.getElementById("SideNav").classList.remove("sideNavHalf");
+                document.getElementById("SideNav").style.width = "0px";
+                if (checkDeviceIsMobile() == false) {
+                    document.getElementById("main").style.marginLeft = "0px";
+                } else {
+                    //  document.getElementById('dvLogo').style.display = 'none';
+                    document.getElementById("mobileBackDrop").style.display = "none";
+                }
+                menuTextOperation(operation);
+            }
+            menubarOperation(operation);
+        }
+
+        function closeNav() {
+            // document.getElementById("SideNav").style.display = "none";
+            document.getElementById("SideNav").classList.remove("sideNavHalf");
+            document.getElementById("SideNav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("mobileBackDrop").style.display = "none";
+            menuTextOperation("HT"); //hide text
+        }
+
+        function menubarOperation(operation) {
+            var mobileMenubar = document.getElementById("dvMobileMenu");
+            var fullMenu = document.getElementById("dvFull");
+            var halfMenu = document.getElementById("dvHalfMenu");
+            var mobileLogo = document.getElementById("imgLogoMobile");
+
+            if (operation == "F") {
+                if (checkDeviceIsMobile() == false) {
+                    fullMenu.style.display = "block";
+                    halfMenu.style.display = "none";
+                    mobileMenubar.style.display = "none";
+                    mobileLogo.style.display = "none";
+                } else {
+                    mobileMenubar.style.display = "inline;";
+                    mobileLogo.style.display = "inline";
+                    fullMenu.style.display = "none";
+                    halfMenu.style.display = "none";
+                    mobileLogo.classList.add("logo-mobile");
+                    document.getElementById("dvMobileMenu").style.display = "inline";
+                }
+            }
+            if (operation == "H") {
+                if (checkDeviceIsMobile() == false) {
+                    fullMenu.style.display = "none";
+                    halfMenu.style.display = "block";
+                    mobileMenubar.style.display = "none";
+                    mobileLogo.style.display = "none";
+                } else {
+                    mobileMenubar.style.display = "inline;";
+                    mobileLogo.style.display = "inline";
+                    fullMenu.style.display = "none";
+                    halfMenu.style.display = "none";
+                    mobileLogo.classList.add("logo-mobile");
+                }
+            }
+            if (operation == "N") {
+                mobileMenubar.style.display = "none";
+                mobileLogo.style.display = "inline";
+                fullMenu.style.display = "none";
+                halfMenu.style.display = "none";
+                mobileLogo.classList.remove("logo-mobile");
+            }
+            console.log(operation);
+        }
+
+        function menuTextOperation(operation) {
+            var appLogo = document.getElementById("dvLogo");
+            if (operation == "H") {
+                //half
+                document.getElementById("SideNav").classList.add("sideNavHalf");
+                var x, i;
+                x = document.querySelectorAll(".menu-text");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                    //  x[i].innerHTML = '';
+                }
+
+                var x, i;
+                x = document.querySelectorAll(".menu-icon");
+                for (i = 0; i < x.length; i++) {
+                    x[i].classList.remove("col-2");
+                    x[i].classList.add("col-12");
+                    x[i].classList.add("text-center");
+                }
+                appLogo.classList.add("text-center");
+            }
+            if (operation == "F") {
+                // full
+                document.getElementById("SideNav").classList.remove("sideNavHalf");
+                appLogo.classList.remove("text-center");
+                var x, i;
+
+                x = document.querySelectorAll(".menu-icon");
+                for (i = 0; i < x.length; i++) {
+                    x[i].classList.add("col-2");
+                    x[i].classList.remove("col-12");
+                    x[i].classList.remove("text-center");
+                }
+
+                setTimeout(function () {
+                    x = document.querySelectorAll(".menu-text");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "block";
+                        // var title = x[i].getAttribute("title");
+                        // x[i].innerHTML = title
+                    }
+                }, 300);
+            }
+            if (operation == "HT" || operation == "N") {
+                //Hide text
+
+                var x, i;
+                x = document.querySelectorAll(".menu-text");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+            }
+        }
+
+        function checkDeviceIsMobile() {
+            var isMobile = false; //initiate as false
+            // device detection
+            if (
+                /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(
+                    navigator.userAgent
+                ) ||
+                /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(
+                    navigator.userAgent.substr(0, 4)
+                )
+            ) {
+                isMobile = true;
+            } else {
+                isMobile = false;
+            }
+            return isMobile;
+        }
+    </script>
+</body>
+</html>

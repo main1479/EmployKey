@@ -1,0 +1,114 @@
+/* XL Device :1200px. */
+@media (min-width: 1200px) and (max-width: 1449px) {
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .sidenav{
+        width: 250px;
+    }
+
+    .app-container{
+        margin-left: 240px;
+    }
+
+    .phone-check {
+        padding-top: 0;
+    }
+
+}
+
+ 
+@media only screen and (max-width: 991px) {
+    .del-btn {
+        position: absolute;
+        right: -55px;
+        top: inherit;
+        transform: translateY(-50%);
+        z-index: 2;
+        left: 0;
+        bottom: -45px;
+    }
+
+    .added-laguage-item {
+        margin-bottom: 55px;
+    }
+
+    /* .add-btn {
+        position: absolute;
+        top: inherit;
+        right: inherit;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: #1074BD;
+        bottom: -35px;
+        left: 0;
+    } */
+    .hobise-item .single-info-form {
+        max-width: 806px;
+        /* margin-bottom: 50px; */
+    }
+    .single-lang-option-btn {
+        /* margin-bottom: 50px; */
+    }
+    /* .single-lang-option-btn .add-btn{
+        position: absolute;
+        top: inherit;
+        right: inherit;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: #1074BD;
+        bottom: -55px;
+        left: 20px;
+    } */
+    .app-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hobise-item .single-info-form{
+        margin-right: 0;
+    }
+}
+ 
+
+@media only screen and (max-width: 767px) {
+    .header-top-prosess.mobile-show{
+        display: flex;
+    }
+    .header-top-prosess.mobile-hide{
+        display: none !important;
+    }
+
+}
+
+
+
+
+
+/* SM Small Device :550px. */
+@media only screen and (max-width: 576px){
+    .inner-content-main-area {
+        padding: 0 0;
+      }
+      
+
+    .form-area-wrapper {
+        padding: 20px 20px !important;
+    }
+
+    .uset-blk h3 {
+        display: none;
+    }
+ 
+    .communication {
+        padding: 30px 38px 25px 38px;
+    }
+
+    
+
+    .single-item{
+        font-size: 12px;
+    }
+ 
+}
